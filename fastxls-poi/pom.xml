@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>fastxls</artifactId>
+		<groupId>com.github.hiwepy</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>fastxls-poi</artifactId>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<packaging>jar</packaging>
+	 
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		
+		<!--POI -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+		</dependency>
+		<!-- 
+			POI提供的poi-ooxml-schemas.jar包是精简版的，为了节省空间，放的只有一些常用的模块，所以要引用另外一些功能的话就需要引用完全版的ooxml-schemas.jar包。
+			另外，3.5和3.6版本的poi对应的完整版的jar包是1.0版的，如果要用3.7及以上的，就需要用ooxml-schemas-1.1.jar这个包了，这样导入之后果然就好了。 
+		            总结一下，遇到这个问题需要导入ooxml-schemas-1.1.jar这个包，直接百度一下就可以下载到，最好去掉poi提供的那个同名的包，我这里就是去掉poi-ooxml-schemas-3.12-20150511.jar这个包
+		-->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>ooxml-schemas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-examples</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>fastxls-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+	</dependencies>
+</project>

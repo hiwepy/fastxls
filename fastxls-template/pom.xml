@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.hiwepy</groupId>
+		<artifactId>fastxls</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>fastxls-template</artifactId>
+	<name>${project.groupId}:${project.artifactId}</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>fastxls-template-beetl</module>
+		<module>fastxls-template-freemarker</module>
+		<module>fastxls-template-httl</module>
+		<module>fastxls-template-jetbrick</module>
+		<module>fastxls-template-jxls1</module>
+		<module>fastxls-template-jxls2</module>
+		<module>fastxls-template-rythm</module>
+		<module>fastxls-template-thymeleaf</module>
+		<module>fastxls-template-velocity</module>
+		<module>fastxls-template-webit</module>
+	</modules>
+
+</project>
