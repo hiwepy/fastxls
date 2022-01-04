@@ -16,7 +16,7 @@
 		3、基于JXLS的XLS写实现
 		4、基于Velocity、freemarker的XLS写实现
 	</description>
-	
+
 	<modules>
 		<module>fastxls-core</module>
 		<module>fastxls-jexcel</module>
@@ -25,7 +25,7 @@
 		<module>fastxls-webmvc</module>
 		<module>fastxls-template</module>
 	</modules>
-	
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -39,12 +39,12 @@
 		<url>https:github.com/hiwepy/${project.artifactId}</url>
 		<tag>${project.artifactId}</tag>
 	</scm>
-	
+
 	<organization>
 		<name>Jeebiz</name>
 		<url>www.jeebiz.net</url>
 	</organization>
-	
+
 	<developers>
 		<developer>
 			<name>wandl</name>
@@ -55,20 +55,20 @@
 			<timezone>+8</timezone>
 		</developer>
 	</developers>
-	
+
 	<distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://192.168.1.100:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>http://192.168.1.100:8081/repository/maven-snapshots/</url>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://nexus.hiwepy.com/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://nexus.hiwepy.com/repository/maven-snapshots/</url>
 			<uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<build>
 		<pluginManagement>
@@ -188,8 +188,8 @@
 						<!-- 跳过单元测试 -->
 						<skip>true</skip>
 						<skipTests>true</skipTests>
-						<!-- forkMode 可设置值有 “never”， “once”， “always” 和 “pertest”。 pretest： 
-							每一个测试创建一个新进程，为每个测试创建新的JVM是单独测试的最彻底方式，但也是最慢的，不适合hudson上持续回归。 once：在一个进程中进行所有测试。once为默认设置，在Hudson上持续回归时建议使用默认设置。 
+						<!-- forkMode 可设置值有 “never”， “once”， “always” 和 “pertest”。 pretest：
+							每一个测试创建一个新进程，为每个测试创建新的JVM是单独测试的最彻底方式，但也是最慢的，不适合hudson上持续回归。 once：在一个进程中进行所有测试。once为默认设置，在Hudson上持续回归时建议使用默认设置。
 							always：在一个进程中并行的运行脚本，Junit4.7以上版本才可以使用，surefire的版本要在2.6以上提供这个功能，其中 threadCount：执行时，指定可分配的线程数量。只和参数parallel配合使用有效。默认：5。 -->
 						<forkMode>once</forkMode>
 						<argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m -Dfile.encoding=UTF-8</argLine>
@@ -500,7 +500,7 @@
 				<artifactId>slf4j-simple</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy -->
 			<dependency>
 			    <groupId>net.bytebuddy</groupId>
@@ -509,14 +509,14 @@
 			</dependency>
 
 			<!-- ######################基础常用工具包###################### -->
-			
+
 			<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
 				<version>${lombok.version}</version>
 			</dependency>
-			
+
 			<!-- 常用功能包括类型转换和动态bean的创建 -->
 			<dependency>
 				<groupId>commons-beanutils</groupId>
@@ -546,8 +546,8 @@
 				<artifactId>commons-io</artifactId>
 				<version>${commons-io.version}</version>
 			</dependency>
-			<!-- Apache Commons Imaging 前身是 Apache Commons Sanselan ，这是一个用来读写各种图像格式的 
-				Java 类库， 包括快速解析图片的基本信息（大小、色彩空间、ICC配置等）和元数据。尽管慢点但非常好的可移植性。 比起 ImageIO/JAI/Toolkit 
+			<!-- Apache Commons Imaging 前身是 Apache Commons Sanselan ，这是一个用来读写各种图像格式的
+				Java 类库， 包括快速解析图片的基本信息（大小、色彩空间、ICC配置等）和元数据。尽管慢点但非常好的可移植性。 比起 ImageIO/JAI/Toolkit
 				更容易使用，支持更多的格式，提供简单访问元数据的方法。 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -672,8 +672,8 @@
 
 			<!-- ###################### 词法分析、HTML、CSS 解析工具包###################### -->
 
-			<!-- ANTLR(ANother Tool for Language Recognition)它是Java开发的词法分析工具，它可以接受词文法语言描述, 
-				并能产生识别这些语言的语句的程序。作为翻译程序的一部分,你可以使用简单的操 作符和动作来参数化你的文法， 使之告诉ANTLR怎样去创建抽象语法树(AST)和怎样产生输出。ANTLR知道怎样去生成识别程序，语言包括 
+			<!-- ANTLR(ANother Tool for Language Recognition)它是Java开发的词法分析工具，它可以接受词文法语言描述,
+				并能产生识别这些语言的语句的程序。作为翻译程序的一部分,你可以使用简单的操 作符和动作来参数化你的文法， 使之告诉ANTLR怎样去创建抽象语法树(AST)和怎样产生输出。ANTLR知道怎样去生成识别程序，语言包括
 				Java，C++，C#. Hibernate就是采用ANTLR来编译HQL查询语言的。 -->
 			<dependency>
 				<groupId>org.antlr</groupId>
@@ -681,9 +681,9 @@
 				<version>${antlr.version}</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-			<!-- Jsoup is a Java library for working with real-world HTML. It provides 
-				a very convenient API for extracting and manipulating data, using the best 
-				of DOM, CSS, and jquery-like methods. jsoup implements the WHATWG HTML5 specification, 
+			<!-- Jsoup is a Java library for working with real-world HTML. It provides
+				a very convenient API for extracting and manipulating data, using the best
+				of DOM, CSS, and jquery-like methods. jsoup implements the WHATWG HTML5 specification,
 				and parses HTML to the same DOM as modern browsers do. -->
 			<dependency>
 				<groupId>org.jsoup</groupId>
@@ -775,9 +775,9 @@
 				<artifactId>fastpoi-core</artifactId>
 				<version>${fastpoi.version}</version>
 			</dependency>
-			
-			<!-- fastjson 是一个性能很好的 Java 语言实现的 JSON 解析器和生成器，来自阿里巴巴的工程师开发。 主要特点： 快速FAST 
-				(比其它任何基于Java的解析器和生成器更快，包括jackson） 强大（支持普通JDK类包括任意Java Bean Class、Collection、Map、Date或enum） 
+
+			<!-- fastjson 是一个性能很好的 Java 语言实现的 JSON 解析器和生成器，来自阿里巴巴的工程师开发。 主要特点： 快速FAST
+				(比其它任何基于Java的解析器和生成器更快，包括jackson） 强大（支持普通JDK类包括任意Java Bean Class、Collection、Map、Date或enum）
 				零依赖（没有依赖其它任何类库除了JDK） -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
@@ -797,7 +797,7 @@
 				<artifactId>json-simple</artifactId>
 				<version>${json-simple.version}</version>
 			</dependency>
-			<!-- Gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。可以将一个 JSON 字符串转成一个 
+			<!-- Gson 是 Google 提供的用来在 Java 对象和 JSON 数据之间进行映射的 Java 类库。可以将一个 JSON 字符串转成一个
 				Java 对象,或者反过来 -->
 			<dependency>
 				<groupId>com.google.code.gson</groupId>
@@ -831,10 +831,10 @@
 				<artifactId>poi-scratchpad</artifactId>
 				<version>${poi.version}</version>
 			</dependency>
-			<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi-ooxml-schemas</artifactId> 
+			<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi-ooxml-schemas</artifactId>
 				<version>${poi.version}</version> </dependency> -->
-			<!-- POI提供的poi-ooxml-schemas.jar包是精简版的，为了节省空间，放的只有一些常用的模块，所以要引用另外一些功能的话就需要引用完全版的ooxml-schemas.jar包。 
-				另外，3.5和3.6版本的poi对应的完整版的jar包是1.0版的，如果要用3.7及以上的，就需要用ooxml-schemas-1.1.jar这个包了，这样导入之后果然就好了。 
+			<!-- POI提供的poi-ooxml-schemas.jar包是精简版的，为了节省空间，放的只有一些常用的模块，所以要引用另外一些功能的话就需要引用完全版的ooxml-schemas.jar包。
+				另外，3.5和3.6版本的poi对应的完整版的jar包是1.0版的，如果要用3.7及以上的，就需要用ooxml-schemas-1.1.jar这个包了，这样导入之后果然就好了。
 				总结一下，遇到这个问题需要导入ooxml-schemas-1.x.jar这个包，同时去除poi提供的那个同名的包依赖. -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
@@ -859,15 +859,15 @@
 				<artifactId>poi-examples</artifactId>
 				<version>${poi.version}</version>
 			</dependency>
-			<!-- XmlBeans generated from various supplied xsds for encryption and 
+			<!-- XmlBeans generated from various supplied xsds for encryption and
 				signing -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>ooxml-security</artifactId>
 				<version>1.1</version>
 			</dependency>
-			<!-- OpenXML4J is a Java library dedicated to the creation and manipulation 
-				of Office Open XML (ECMA-376) and OPC based documents (for example Office 
+			<!-- OpenXML4J is a Java library dedicated to the creation and manipulation
+				of Office Open XML (ECMA-376) and OPC based documents (for example Office
 				2007 Word, Excel and PowerPoint documents). -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
@@ -1040,15 +1040,15 @@
 
 			<!-- ###################### 缓存框架 ###################### -->
 
-			<!-- Guava工程包含了若干被Google的 Java项目广泛依赖 的核心库，例如：集合 [collections] 、缓存 [caching] 
-				、原生类型支持 [primitives support] 、 并发库 [concurrency libraries] 、通用注解 [common 
+			<!-- Guava工程包含了若干被Google的 Java项目广泛依赖 的核心库，例如：集合 [collections] 、缓存 [caching]
+				、原生类型支持 [primitives support] 、 并发库 [concurrency libraries] 、通用注解 [common
 				annotations] 、字符串处理 [string processing] 、I/O 等等。 -->
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
 			</dependency>
-			
+
 			<!-- beetl模板 -->
 			<!-- https://mvnrepository.com/artifact/com.ibeetl/beetl -->
 			<dependency>
@@ -1133,27 +1133,27 @@
 				<artifactId>webit-script</artifactId>
 				<version>${webit-script.version}</version>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/org.jamel.dbf/dbf-reader -->
 			<dependency>
 			    <groupId>org.jamel.dbf</groupId>
 			    <artifactId>dbf-reader</artifactId>
 			    <version>${dbf.version}</version>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
 			<dependency>
 			    <groupId>org.hibernate.validator</groupId>
 			    <artifactId>hibernate-validator</artifactId>
 			    <version>${hibernate-validator.version}</version>
 			</dependency>
-			
+
 			<dependency>
 		        <groupId>com.github.hiwepy</groupId>
 				<artifactId>hitool-core</artifactId>
 				<version>${hitool.version}</version>
 	        </dependency>
-			
+
 		</dependencies>
 	</dependencyManagement>
 
