@@ -6,10 +6,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.github.hiwepy.fastxls.core.Suffix;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.github.hiwepy.fastxls.core.Suffix;
 
 /**
  * Excel 电子表格 抽象化数据 对象

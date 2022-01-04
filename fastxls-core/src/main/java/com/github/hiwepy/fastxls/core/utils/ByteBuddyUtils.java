@@ -14,16 +14,17 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.github.hiwepy.fastxls.core.JdbcType;
+import com.github.hiwepy.fastxls.core.model.RowMap;
+import com.github.hiwepy.fastxls.core.validation.ValidationAnnotationUtils;
+import com.github.hiwepy.fastxls.core.validation.ValidationUtils;
+
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.NamingStrategy;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.DynamicType.Builder;
 import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional.Valuable;
 import net.bytebuddy.utility.RandomString;
-import com.github.hiwepy.fastxls.core.JdbcType;
-import com.github.hiwepy.fastxls.core.model.RowMap;
-import com.github.hiwepy.fastxls.core.validation.ValidationAnnotationUtils;
-import com.github.hiwepy.fastxls.core.validation.ValidationUtils;
 
 @SuppressWarnings("unchecked")
 public class ByteBuddyUtils {

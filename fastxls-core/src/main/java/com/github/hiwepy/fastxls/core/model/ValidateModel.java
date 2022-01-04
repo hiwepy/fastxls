@@ -1,10 +1,11 @@
 package com.github.hiwepy.fastxls.core.model;
 
+import com.github.hiwepy.fastxls.core.OperatorType;
+import com.github.hiwepy.fastxls.core.ValidationType;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.github.hiwepy.fastxls.core.OperatorType;
-import com.github.hiwepy.fastxls.core.ValidationType;
 
 /**
  */

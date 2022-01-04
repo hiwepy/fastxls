@@ -2,11 +2,12 @@ package com.github.hiwepy.fastxls.core.model;
 
 import java.io.Serializable;
 
+import com.github.hiwepy.fastxls.core.Cell;
+import com.github.hiwepy.fastxls.core.CellStyle;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.github.hiwepy.fastxls.core.Cell;
-import com.github.hiwepy.fastxls.core.CellStyle;
 
 /**
  * 单元格model实体

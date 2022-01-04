@@ -12,8 +12,6 @@ import java.util.function.BiFunction;
 import javax.validation.Validation;
 import javax.validation.Validator;
 
-import com.google.common.collect.Lists;
-
 import com.github.hiwepy.fastxls.core.interceptor.Interceptor;
 import com.github.hiwepy.fastxls.core.model.ColumnWrapper;
 import com.github.hiwepy.fastxls.core.model.RowMap;
@@ -21,6 +19,7 @@ import com.github.hiwepy.fastxls.core.property.ExportProperties;
 import com.github.hiwepy.fastxls.core.provider.ValidationMessageProvider;
 import com.github.hiwepy.fastxls.core.provider.def.DefaultValidationMessageProvider;
 import com.github.hiwepy.fastxls.core.utils.Assert;
+import com.google.common.collect.Lists;
 
 /**
  * 数据导入逻辑构建器

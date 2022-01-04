@@ -28,8 +28,6 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import com.google.common.collect.Lists;
-
 import com.github.hiwepy.fastxls.core.Constants;
 import com.github.hiwepy.fastxls.core.builder.DataImportBuilder;
 import com.github.hiwepy.fastxls.core.function.DefaultRowDtoMapperBiFunction;
@@ -47,6 +45,7 @@ import com.github.hiwepy.fastxls.core.model.RowWrapper;
 import com.github.hiwepy.fastxls.core.task.DataImportTask;
 import com.github.hiwepy.fastxls.core.task.MappedDataImportTask;
 import com.github.hiwepy.fastxls.core.utils.ExecutorUtils;
+import com.google.common.collect.Lists;
 
 public class POIDataImportBuilder<T extends CellModel, M extends RowMap> 
 	extends DataImportBuilder<Workbook, Sheet, Row, Cell , T, M>  {

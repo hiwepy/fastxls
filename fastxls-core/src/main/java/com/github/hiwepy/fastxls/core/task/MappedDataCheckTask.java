@@ -17,14 +17,13 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Lists;
-
 import com.github.hiwepy.fastxls.core.Constants;
 import com.github.hiwepy.fastxls.core.WorkbookReader;
 import com.github.hiwepy.fastxls.core.model.RowConstraintViolation;
 import com.github.hiwepy.fastxls.core.model.RowMap;
 import com.github.hiwepy.fastxls.core.model.RowMapper;
 import com.github.hiwepy.fastxls.core.model.RowWrapper;
+import com.google.common.collect.Lists;
 
 /**
  * Excel 数据检查线程（Row对象映射为Model对象，借助Validator对象进行数据行校验）

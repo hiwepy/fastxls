@@ -18,13 +18,12 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Lists;
-
 import com.github.hiwepy.fastxls.core.Constants;
 import com.github.hiwepy.fastxls.core.WorkbookReader;
 import com.github.hiwepy.fastxls.core.model.RowConstraintViolation;
 import com.github.hiwepy.fastxls.core.model.RowMap;
 import com.github.hiwepy.fastxls.core.model.RowWrapper;
+import com.google.common.collect.Lists;
 
 /**
  * Excel 数据导入更新线程

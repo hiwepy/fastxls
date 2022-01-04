@@ -6,11 +6,12 @@ package com.github.hiwepy.fastxls.core.property;
 
 import org.apache.commons.lang3.SystemUtils;
 
+import com.github.hiwepy.fastxls.core.FilenameSuffix;
+import com.github.hiwepy.fastxls.core.Suffix;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import com.github.hiwepy.fastxls.core.FilenameSuffix;
-import com.github.hiwepy.fastxls.core.Suffix;
 
 @Getter
 @Setter

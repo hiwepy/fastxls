@@ -28,7 +28,7 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.hibernate.validator.constraints.Length;
+import org.checkerframework.checker.units.qual.Length;
 import org.springframework.util.StringUtils;
 
 import net.bytebuddy.description.annotation.AnnotationDescription;
